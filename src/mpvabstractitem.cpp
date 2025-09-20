@@ -20,7 +20,7 @@ MpvAbstractItemPrivate::MpvAbstractItemPrivate(MpvAbstractItem *q)
 
 MpvAbstractItem::MpvAbstractItem(QQuickItem *parent)
     : QQuickFramebufferObject(parent)
-    , d_ptr{std::make_unique<MpvAbstractItemPrivate>(this)}
+    , d_ptr{std::make_unique<MpvAbstractItemPrivate>(this)}    
 {
     if (QQuickWindow::graphicsApi() != QSGRendererInterface::OpenGL) {
         qDebug() << "MpvAbstractItem: "

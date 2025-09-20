@@ -74,6 +74,13 @@ public:
     void eventHandler();
     mpv_handle *mpv() const;
 
+    /**
+     * Set the backend to use for rendering. Must be called before init().
+     * 
+     * @param backend The backend name (e.g., "gpu", "gpu-next", or empty for default)
+     */
+    void setBackend(const QString &backend);
+
 public Q_SLOTS:
     void init();
 

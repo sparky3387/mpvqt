@@ -170,7 +170,7 @@ MpvController::MpvController(QObject *parent)
 
 void MpvController::init()
 {
-    d_ptr = std::make_unique<MpvControllerPrivate>(this);
+        d_ptr = std::make_unique<MpvControllerPrivate>(this);
     // Qt sets the locale in the QGuiApplication constructor, but libmpv
     // requires the LC_NUMERIC category to be set to "C", so change it back.
     std::setlocale(LC_NUMERIC, "C");
